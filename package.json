@@ -1,0 +1,21 @@
+{
+  "name": "versionize",
+  "version": "0.1.0",
+  "description": "Version files and Update Links in the project",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MuneebStack/versionize.js.git"
+  },
+  "bin": {
+    "versionize": "./lib/main.js"
+  },
+  "keywords": [
+    "Versions"
+  ],
+  "author": "Muneeb",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MuneebStack/versionize.js/issues"
+  },
+  "homepage": "https://github.com/MuneebStack/versionize.js#readme"
+}
