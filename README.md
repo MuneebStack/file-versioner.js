@@ -46,7 +46,7 @@ Create a `versionize.json` file at the root of your project with the following s
 
 ### Note
 
-When the length parameter is set to 0, the tool will generate filenames without a version string, avoiding any additional numeric strings between the filename and its extension. This is useful for cases where versioning is no longer required.
+When the length parameter is set to 0, the filename will be generated without a version. This is useful for cases where versioning is no longer required.
 
 ## Example versionize.json
 
