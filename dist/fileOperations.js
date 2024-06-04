@@ -29,8 +29,9 @@ const path = __importStar(require("path"));
 const utils_1 = require("./utils/utils");
 const renameFilesInFolders = (folders, config) => {
     folders.forEach((folderObj) => {
+        var _a;
         const folder = folderObj.folder;
-        const updateInFile = (folderObj === null || folderObj === void 0 ? void 0 : folderObj.updateInFile) || (config === null || config === void 0 ? void 0 : config.updateInFile);
+        const updateInFile = (_a = folderObj === null || folderObj === void 0 ? void 0 : folderObj.updateInFile) !== null && _a !== void 0 ? _a : config === null || config === void 0 ? void 0 : config.updateInFile;
         const filePath = folderObj.filePath || config.filePath;
         const length = (folderObj === null || folderObj === void 0 ? void 0 : folderObj.length) || (config === null || config === void 0 ? void 0 : config.length);
         if (fs.existsSync(folder)) {
