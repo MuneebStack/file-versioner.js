@@ -7,7 +7,7 @@
     "url": "https://github.com/MuneebStack/versionize.js.git"
   },
   "bin": {
-    "versionize": "./lib/main.js"
+    "versionize": "./dist/main.js"
   },
   "keywords": [
     "Versions"
@@ -17,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/MuneebStack/versionize.js/issues"
   },
-  "homepage": "https://github.com/MuneebStack/versionize.js#readme"
+  "homepage": "https://github.com/MuneebStack/versionize.js#readme",
+  "devDependencies": {
+    "@types/node": "^20.13.0",
+    "typescript": "^5.4.5"
+  }
 }
