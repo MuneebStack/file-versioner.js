@@ -39,7 +39,7 @@ const renameFileWithVersion = (originalFilePath, versionLength = 6) => {
     const base = path.basename(originalFilePath, ext);
     const baseWithoutVersion = base.replace(/\.\d+$/, '');
     const version = (0, exports.generateRandomVersion)(versionLength);
-    const newFileName = `${baseWithoutVersion}.${version}${ext}`;
+    const newFileName = `${baseWithoutVersion}${version ? '.' + version : ''}${ext}`;
     const newFilePath = path.join(dir, newFileName);
     return newFilePath;
 };
