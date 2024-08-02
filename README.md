@@ -19,16 +19,17 @@ Create a `versionize.json` file at the root of your project with the following s
   "folders": [
     {
       "folder": "path/to/your/folder",
-      "filePath": "path/to/your/file.html",
+      "filePath": ["path/to/your/file1.html", "path/to/your/file2.html"],
       "length": 8
     },
     {
       "folder": "path/to/another/folder",
+      "filePath": "path/to/your/file.html",
       "updateInFile": false
     }
   ],
   "updateInFile": true,
-  "filePath": "path/to/default/file.html",
+  "filePath": ["path/to/default/file1.html", "path/to/default/file2.html"],
   "length": 6
 }
 ```
@@ -38,9 +39,9 @@ Create a `versionize.json` file at the root of your project with the following s
 - folders: An array of objects specifying the folders to process.
 - folder: The path to the folder containing files to versionize.
 - updateInFile: (Optional) Boolean indicating whether to update links in files. Defaults to updateInFile from the root level, or false if not specified.
-- filePath: (Optional) Path to the file to update links. If not provided, filePath from the root level will be used.
+- filePath: (Optional) Path(s) to the file to update links. If not provided, filePath from the root level will be used.
 - length: (Optional) Length of the version string. If not provided, length from the root level will be used. Defaults to 6 if not specified.
-- filePath: Default path to the file to update links.
+- filePath: Default path(s) to the file to update links.
 - updateInFile: (Optional) Default boolean indicating whether to update links in files. Defaults to false if not provided.
 - length: (Optional) Default length of the version string. Defaults to 6 if not provided.
 
@@ -58,7 +59,7 @@ When the length parameter is set to 0, the filename will be generated without a 
         },
         {
             "folder": "public/images",
-            "filePath": "app/index.php"
+            "filePath": ["app/index.php", "app/another-file.php"],
         }
     ],
     "updateInFile": true,
