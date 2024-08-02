@@ -32,7 +32,8 @@ const renameFilesInFolders = (folders, config) => {
         var _a;
         const folder = folderObj.folder;
         const updateInFile = (_a = folderObj === null || folderObj === void 0 ? void 0 : folderObj.updateInFile) !== null && _a !== void 0 ? _a : config === null || config === void 0 ? void 0 : config.updateInFile;
-        const filePath = folderObj.filePath || config.filePath;
+        const filePaths = (folderObj === null || folderObj === void 0 ? void 0 : folderObj.filePath) ? (Array.isArray(folderObj.filePath) ? folderObj.filePath : [folderObj.filePath])
+            : (Array.isArray(config.filePath) ? config.filePath : [config.filePath]);
         const length = (folderObj === null || folderObj === void 0 ? void 0 : folderObj.length) || (config === null || config === void 0 ? void 0 : config.length);
         if (fs.existsSync(folder)) {
             const files = fs.readdirSync(folder);
@@ -44,7 +45,14 @@ const renameFilesInFolders = (folders, config) => {
                     fs.renameSync(currentFilePath, versionedPath);
                     console.log(`Success: Renamed ${currentFilePath} to ${versionedPath}`);
                     if (updateInFile) {
-                        updateLinksInHtml(filePath, fileName, path.basename(versionedPath));
+                        filePaths.forEach(filePath => {
+                            if (filePath) {
+                                updateLinksInHtml(filePath, fileName, path.basename(versionedPath));
+                            }
+                            else {
+                                console.error(`Error: File Path not found: ${filePath}`);
+                            }
+                        });
                     }
                 }
             });

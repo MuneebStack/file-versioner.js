@@ -7,11 +7,13 @@ const renameFilesInFolders = (folders: Config["folders"], config: Config) => {
     folders.forEach((folderObj) => {
         const folder = folderObj.folder;
         const updateInFile = folderObj?.updateInFile ?? config?.updateInFile;
-        const filePath = folderObj.filePath || config.filePath;
+        const filePaths = 
+            folderObj?.filePath ? (Array.isArray(folderObj.filePath) ? folderObj.filePath : [folderObj.filePath])
+            : (Array.isArray(config.filePath) ? config.filePath : [config.filePath]);
         const length = folderObj?.length || config?.length;
 
         if (fs.existsSync(folder)) {
-            const files = fs.readdirSync(folder);
+            const files: string[] = fs.readdirSync(folder);
 
             files.forEach((fileName) => {
                 const currentFilePath = path.join(folder, fileName);
@@ -24,7 +26,13 @@ const renameFilesInFolders = (folders: Config["folders"], config: Config) => {
                     console.log(`Success: Renamed ${currentFilePath} to ${versionedPath}`);
 
                     if (updateInFile) {
-                        updateLinksInHtml(filePath, fileName, path.basename(versionedPath));
+                        filePaths.forEach(filePath => {
+                            if(filePath){
+                                updateLinksInHtml(filePath, fileName, path.basename(versionedPath));
+                            }else{
+                                console.error(`Error: File Path not found: ${filePath}`);
+                            }
+                        });
                     }
                 }
             });
