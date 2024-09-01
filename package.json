@@ -7,8 +7,16 @@
     "url": "https://github.com/MuneebStack/versionize.js.git"
   },
   "bin": {
-    "versionize": "./dist/main.js"
+    "versionize": "./dist/bundle.js"
   },
+  "scripts": {
+    "build": "webpack --config webpack.config.js"
+  },
+  "files": [
+    "dist/",
+    "package.json",
+    "README.md"
+  ],
   "keywords": [
     "Versions"
   ],
@@ -20,6 +28,12 @@
   "homepage": "https://github.com/MuneebStack/versionize.js#readme",
   "devDependencies": {
     "@types/node": "^20.13.0",
-    "typescript": "^5.4.5"
+    "banner-webpack-plugin": "^0.2.3",
+    "dotenv": "^16.4.5",
+    "terser-webpack-plugin": "^5.3.10",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.5.4",
+    "webpack": "^5.94.0",
+    "webpack-cli": "^5.1.4"
   }
 }
