@@ -1,13 +1,13 @@
 {
-  "name": "versionize",
-  "version": "0.1.0",
+  "name": "file-versioner",
+  "version": "0.0.0",
   "description": "Version files and Update Links in the project",
   "repository": {
     "type": "git",
-    "url": "https://github.com/MuneebStack/versionize.js.git"
+    "url": "https://github.com/MuneebStack/file-versioner.js.git"
   },
   "bin": {
-    "versionize": "./dist/bundle.js"
+    "file-versioner": "./dist/bundle.js"
   },
   "scripts": {
     "build": "webpack --config webpack.config.js"
@@ -18,7 +18,8 @@
     "README.md"
   ],
   "keywords": [
-    "Versions"
+    "Versions",
+    "Versioner"
   ],
   "author": "Muneeb",
   "license": "MIT",

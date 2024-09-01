@@ -1,18 +1,18 @@
-# Versionize
+# File Versioner
 
 ## Overview
 
-Versionize is a Node.js package that allows you to versionize your CSS, JS, or other specified files and update their associated links in HTML, PHP, or any other files containing these tags.
+File Versioner is a Node.js package that allows you to version your CSS, JS, or other specified files and update their associated links in HTML, PHP, or any other files containing these tags.
 
 ## Installation
 
 ```bash
-npm install versionize
+npm install file-versioner
 ```
 
 ## Usage
 
-Create a `versionize.json` file at the root of your project with the following structure:
+Create a `file-versioner.json` file at the root of your project with the following structure:
 
 ```bash
 {
@@ -49,7 +49,7 @@ Create a `versionize.json` file at the root of your project with the following s
 
 When the length parameter is set to 0, the filename will be generated without a version. This is useful for cases where versioning is no longer required.
 
-## Example versionize.json
+## Example file-versioner.json
 
 ```bash
 {
@@ -68,17 +68,17 @@ When the length parameter is set to 0, the filename will be generated without a 
 }
 ```
 
-## Running Versionize
+## Running file-versioner
 
-After setting up versionize.json, run the following command in your project directory:
+After setting up file-versioner.json, run the following command in your project directory:
 
 ```bash
-npx versionize
+npx file-versioner
 ```
 
 ## Behavior
 
-The versionize command will:
+The file-versioner command will:
 
 - Rename each file in the folder with a version string appended to its name.
 - Optionally update links to these files in the specified filePath.

@@ -12,7 +12,7 @@ const loadConfig = (filePath: string): Config => {
     return JSON.parse(configFileContent);
 };
 
-const configPath = path.join(process.cwd(), 'versionize.json');
+const configPath = path.join(process.cwd(), 'file-versioner.json');
 const config = loadConfig(configPath);
 
 export default config;
