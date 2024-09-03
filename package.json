@@ -10,7 +10,8 @@
     "file-versioner": "./dist/bundle.js"
   },
   "scripts": {
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack --config webpack.config.js",
+    "release": "semantic-release"
   },
   "files": [
     "dist/",
@@ -28,9 +29,13 @@
   },
   "homepage": "https://github.com/MuneebStack/versionize.js#readme",
   "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/npm": "^12.0.1",
     "@types/node": "^20.13.0",
     "banner-webpack-plugin": "^0.2.3",
     "dotenv": "^16.4.5",
+    "semantic-release": "^24.1.0",
     "terser-webpack-plugin": "^5.3.10",
     "ts-loader": "^9.5.1",
     "typescript": "^5.5.4",
