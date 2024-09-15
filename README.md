@@ -89,5 +89,8 @@ Muneeb
 ## License
 This project is licensed under the MIT License.
 
+## Contact
+For support or inquiries, please reach out to me at [muneeb.creatives@gmail.com](muneeb.creatives@gmail.com).
+
 ## Contributing
 Contributions, issues, and feature requests are welcome !
