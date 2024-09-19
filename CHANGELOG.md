@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/MuneebStack/file-versioner.js/compare/v1.0.1...v1.1.0) (2024-09-19)
+
+
+### Features
+
+* bumping the new version ([41da2e1](https://github.com/MuneebStack/file-versioner.js/commit/41da2e11dee8143638c84bef47e4bc366fad45f1))
+
 ## [1.0.1](https://github.com/MuneebStack/file-versioner.js/compare/v1.0.0...v1.0.1) (2024-09-03)
 
 
