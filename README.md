@@ -83,14 +83,14 @@ The file-versioner command will:
 - Rename each file in the folder with a version string appended to its name.
 - Optionally update links to these files in the specified filePath.
 
-## License
-This project is licensed under the MIT License.
-
 ## Author
 Muneeb
 
 ## Contact
 For support or inquiries, please reach out to me at [muneeb.creatives@gmail.com](muneeb.creatives@gmail.com).
+
+## License
+This project is licensed under the MIT License.
 
 ## Contributing
 Contributions, issues, and feature requests are welcome !
